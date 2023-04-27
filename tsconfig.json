@@ -1,0 +1,16 @@
+//convertir de ty a js
+
+{
+    "compilerOptions": {
+        "target": "ES6", //version de js
+        "module": "CommonJS",  //todo se convierte en un módulo para que se pueda utiliar en otro módulo
+                        //mecanismo de empaquetamiento, de estructuración del proyecto
+        "rootDir": "src", //donde va a encontrar el compilador de ts, codigo fuente del aplicativo
+        "outDir": "dist", //directorio de salida
+        "strict": true, //decirle a ty q siga las reglas de codificación, verificacion de codigo
+        "esModuleInterop": true//interoperabilidad de modulos
+    },
+    //lo que incluyo al hacer la transformacion entre js y ts y lo q no
+    "include": ["src/**/*"], //concentrese en la carpeta src en todo lo q haya
+    "exclude": ["node_modules"]//excluyo la carpeto de instalacion de node
+}
