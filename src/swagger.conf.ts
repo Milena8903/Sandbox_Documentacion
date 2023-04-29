@@ -6,7 +6,7 @@ import swaggerJSDoc from "swagger-jsdoc";
 //exporto la opciones
 export const swaggerOptions={
     //creo el objeto json
-    defiintio:{
+    definition:{
         openapi: "3.0.0",
         info:{
             title:"API de las IPS AteneaIPS",
@@ -15,7 +15,7 @@ export const swaggerOptions={
         },
         servers:[//publicar la info de la api
             {
-                url:"http:localhost:3000",
+                url:"http://localhost:3000",
                 description:"Servidor local de documentación"
             }
         ]
