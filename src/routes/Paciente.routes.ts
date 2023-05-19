@@ -52,4 +52,5 @@ class PacienteRouter{
     }
 }
 
-export default PacienteRouter
+const miRouter = new PacienteRouter()
+export default miRouter.router

@@ -8,7 +8,10 @@ import express,{Application, Request, Response} from 'express'
 //import { error } from 'console'
 
 //importo las rutas
-import PacienteRouter from './routes/PacienteRouter'
+import PacienteRouter from './routes/Paciente.routes'
+import MedicoRouter from './routes/Medico.routes'
+import FormularioRouter from './routes/Formulario.routes'
+import cors from 'cors'
 /**
  * Clase principal de la API. Define las rutas de la API
  * 
@@ -17,18 +20,15 @@ import PacienteRouter from './routes/PacienteRouter'
  */
 
 class App{
-
 	//Atributos
 	public app:Application //varialble q va a ser de cualquier tipo, cuando no sabe ese tipo de varible
 	private server:any //servidor q se ejecuta al arrancar la aplicación, prender y apagar
 	
-
 	/**
      * Método constructor de la clase
      * 
      * @author Milena Prieto
      */
-
 
 	constructor(){
 
@@ -48,7 +48,8 @@ class App{
 		//se debe crear un objeto de la clase prismaCliente
 		//va a ser un nuevo objeto de la clase prima
 		//this.prismaClient = new PrismaClient() //No se necesita por estar en controller
-
+		
+		this.app.use(cors())
 		this.routes() //definir los punto de entrada al proyecto
 	}
 
@@ -70,6 +71,8 @@ class App{
 		//agregando nuevos elementos al stack de expres
 		//utilice todas las rutas q se tengan
 		this.app.use('/', PacienteRouter)	
+		this.app.use('/', MedicoRouter)
+		this.app.use('/', FormularioRouter)
 	}
     
 	public start():void{ //funcion q arranca el servidor

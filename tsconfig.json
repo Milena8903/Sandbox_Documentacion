@@ -8,7 +8,8 @@
         "rootDir": "src", //donde va a encontrar el compilador de ts, codigo fuente del aplicativo
         "outDir": "dist", //directorio de salida
         "strict": true, //decirle a ty q siga las reglas de codificación, verificacion de codigo
-        "esModuleInterop": true//interoperabilidad de modulos
+        "esModuleInterop": true,//interoperabilidad de modulos
+        "resolveJsonModule": true //cuando detecte un json conviertalo a un módulo para poderlo utilizar
     },
     //lo que incluyo al hacer la transformacion entre js y ts y lo q no
     "include": ["src/**/*", "test/index.test.ts"], //concentrese en la carpeta src en todo lo q haya
