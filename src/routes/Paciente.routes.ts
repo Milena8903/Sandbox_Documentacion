@@ -1,6 +1,4 @@
 //en prisma se debe definir los atributos de una clase antes de utilizarlos
-
-
 //Express tiene una clase q se llama router donde defino todas las rutas
 //q voy a trabajar
 import { Router, Response, Request } from 'express'
@@ -16,7 +14,6 @@ class PacienteRouter{
     constructor(){
         this.router = Router()
         this.pacienteController = new PacienteController()
-
         //Cuando costruya el objeto llame a routers
         this.routes()
     }

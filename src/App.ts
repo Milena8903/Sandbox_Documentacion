@@ -2,6 +2,7 @@ import swaggerUi  from 'swagger-ui-express'
 //desestructurar un objeto
 import { swaggerSpec } from './swagger.conf'
 import express,{Application, Request, Response} from 'express'
+import { Server } from 'http'
 //ya no se necesita prisma porque todo se va a conectar
 //por los controllers y ahí con prisma
 //import { PrismaClient } from '@prisma/client' //se utiliza el cliente prisma para conectarse a la bd
@@ -22,7 +23,7 @@ import cors from 'cors'
 class App{
 	//Atributos
 	public app:Application //varialble q va a ser de cualquier tipo, cuando no sabe ese tipo de varible
-	private server:any //servidor q se ejecuta al arrancar la aplicación, prender y apagar
+	private server:Server  //servidor q se ejecuta al arrancar la aplicación, prender y apagar
 	
 	/**
      * Método constructor de la clase
@@ -31,6 +32,8 @@ class App{
      */
 
 	constructor(){
+
+		this.server = new Server()
 
 		/**
          * Expres es la biblioteca para definir API en el ecosistema de Node.js 
@@ -77,8 +80,8 @@ class App{
     
 	public start():void{ //funcion q arranca el servidor
 		this.server = this.app.listen(
-			3000, //abre un puerto en el servidor
-			()=>{console.log('El servidor está escuchando en el puerto 3000')}
+			4500, //abre un puerto en el servidor
+			()=>{console.log('El servidor está escuchando en el puerto 4500')}
 		)
 	}
 

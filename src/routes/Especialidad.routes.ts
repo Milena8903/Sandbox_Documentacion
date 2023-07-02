@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express'
-import EspecialidadController from '../controllers/especialidadController'
+import EspecialidadController from '../controllers/EspecialidadController'
 
 class EspecialidadRouter{
 
@@ -13,7 +13,7 @@ class EspecialidadRouter{
     }
 
     private routes():void{
-        this.router.get(
+        this.router.post(
             '/especialidad',
             (req:Request, res:Response)=>{
                 this.especialidadController.obtenerEspecialidad(req,res)

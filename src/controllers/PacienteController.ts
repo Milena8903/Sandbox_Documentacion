@@ -11,7 +11,6 @@ class PacienteController{
         this.prismaClient = new PrismaClient()
     }
 
-
     //paso lo que habia en /pacientes
     //crea un objeto pacientes y va a guardar todo lo q devuelva
     //prisma cuando aplique la funcion findMany en el objeto pacienntes
@@ -30,7 +29,6 @@ class PacienteController{
             //ruta relacionada ya con la bd
                 //acceso a lo q el usuario envie en la peticion
                 //se desestroctura
-                
                     //req.body //devuelve el json que se envio en el send(cliente)
                     //res.send('To Do')
 
@@ -53,8 +51,6 @@ class PacienteController{
                 //TO DO: Falta verificar la validez y connsistencia 
                 //de los datos de entrada
                 const fechaNacimiento = new Date(fecha) 
-
-
                 //ahora señor prisma tome estos datos y guardelos en la base de datos
                 //ese paciente = a llamar a prisma
                 //se llama al objeto que se creo
