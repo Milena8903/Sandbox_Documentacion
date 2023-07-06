@@ -12,6 +12,7 @@ class MedicoRouter{
         this.routes()
     }
 
+    //Llamar al req, la ruta
     private routes():void{
         this.router.get('/medicos',
             (req:Request, res:Response)=>{

@@ -14,6 +14,8 @@ class CitaController{
         res.json(medicos)
     }
 
+    
+
 }
 
 export default CitaController
